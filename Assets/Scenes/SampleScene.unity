@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 403041829}
   - component: {fileID: 403041831}
   - component: {fileID: 403041830}
+  - component: {fileID: 403041832}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -204,6 +205,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403041828}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!70 &403041832
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403041828}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000049670536, y: -0.12634811}
+  m_Size: {x: 1, y: 2.350028}
+  m_Direction: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,8 +994,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 889239623}
     - target: {fileID: 1988591232628680706, guid: ff5f2a845ef95514ab44eebf3d8b6b71, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9081602
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988591232628680706, guid: ff5f2a845ef95514ab44eebf3d8b6b71, type: 3}
+      propertyPath: m_Center.x
+      value: 0.04592021
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988591232628680706, guid: ff5f2a845ef95514ab44eebf3d8b6b71, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2659527692829210388, guid: ff5f2a845ef95514ab44eebf3d8b6b71, type: 3}
       propertyPath: m_RootOrder
@@ -986,7 +1011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2659527692829210388, guid: ff5f2a845ef95514ab44eebf3d8b6b71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.02
+      value: 14.37
       objectReference: {fileID: 0}
     - target: {fileID: 2659527692829210388, guid: ff5f2a845ef95514ab44eebf3d8b6b71, type: 3}
       propertyPath: m_LocalPosition.y
