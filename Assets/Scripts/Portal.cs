@@ -15,8 +15,8 @@ public class Portal : MonoBehaviour
     }
 
     void Teleport(GameObject target){
-        Vector3 diff = new Vector3(1f, 0f, 0f);
-        target.transform.position = conPortal.transform.position + diff;
-       // target.transform.rotation = conPortal.transform.rotation;
+        //Vector3 diff = new Vector3(1f, 0f, 0f);
+        target.transform.localPosition = conPortal.transform.localPosition - transform.right * 2f;
+        //target.transform.localPosition = conPortal.transform.localPosition + diff;
     }
 }
