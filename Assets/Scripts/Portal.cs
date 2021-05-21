@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    //Vector3(1f, 0f, 0f); == BLUE SIDE
-    //Vector3(-1f, 0f, 0f); == PINK SIDE
     public GameObject conPortal;
+    public bool JustPassed;
 
 
     void OnTriggerEnter(Collider c){
@@ -15,8 +14,9 @@ public class Portal : MonoBehaviour
     }
 
     void Teleport(GameObject target){
-        //Vector3 diff = new Vector3(1f, 0f, 0f);
         target.transform.localPosition = conPortal.transform.localPosition - transform.right * 2f;
-        //target.transform.localPosition = conPortal.transform.localPosition + diff;
+
+        float scaling = conPortal.transform.localScale.y/transform.localScale.y; // Scale difference between portals
+        target.transform.localScale = target.transform.localScale * scaling; // Scale object passing according to scale difference
     }
 }
