@@ -14,8 +14,7 @@ public class Portal : MonoBehaviour
     }
 
     void Teleport(GameObject target){
-        target.transform.localPosition = conPortal.transform.localPosition - transform.right * 2f;
-
+        target.transform.localPosition = conPortal.transform.localPosition - transform.right * target.transform.localScale.x - transform.up * conPortal.transform.localScale.y/1.99f;
         float scaling = conPortal.transform.localScale.y/transform.localScale.y; // Scale difference between portals
         target.transform.localScale = target.transform.localScale * scaling; // Scale object passing according to scale difference
     }
