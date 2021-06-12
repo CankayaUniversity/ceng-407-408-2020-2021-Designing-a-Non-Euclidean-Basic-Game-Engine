@@ -14,10 +14,6 @@ public class Portal : MonoBehaviour
     }
 
     void Teleport(GameObject target){
-<<<<<<< Updated upstream
-        target.transform.localPosition = conPortal.transform.localPosition - transform.right * target.transform.localScale.x - transform.up * conPortal.transform.localScale.y/1.99f;
-        target.transform.Rotate(Vector3.up, 180);
-=======
         /*float rotDiff = Quaternion.Angle(transform.rotation, conPortal.transform.rotation);
         Vector3 rotationDiff = new Vector3(0f, transform.rotation.y- conPortal.transform.rotation.y, 0f);
         target.transform.eulerAngles += rotationDiff;
@@ -25,7 +21,6 @@ public class Portal : MonoBehaviour
         Vector3 sizeOffset = conPortal.transform.right * target.transform.localScale.x;
         target.transform.position = conPortal.transform.position + positionOffset - sizeOffset;*/
 
->>>>>>> Stashed changes
         float scaling = conPortal.transform.localScale.y/transform.localScale.y; // Scale difference between portals
         target.transform.localScale = target.transform.localScale * scaling; // Scale object passing according to scale difference
         target.transform.position = conPortal.transform.position + conPlane.up * target.transform.localScale.x * 1.5f - conPortal.transform.up * conPortal.transform.localScale.y/1.90f;
