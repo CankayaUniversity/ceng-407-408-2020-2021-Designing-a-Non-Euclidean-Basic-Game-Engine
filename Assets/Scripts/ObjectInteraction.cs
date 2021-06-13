@@ -17,7 +17,7 @@ public class ObjectInteraction : MonoBehaviour
         } else if(Input.GetKeyDown(KeyCode.F) && placement.childCount == 0){
             var ray = cam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 5)){
+            if (Physics.Raycast(ray, out hit, 10)){
                 if(hit.transform == this.transform)
                     PickUp();
 
